@@ -53,3 +53,11 @@ export interface ParagraphLayout {
 
   height: number;
 }
+
+export interface ParagraphMetrics {
+  width: number;
+
+  height: number;
+
+  lineCount: number;
+}

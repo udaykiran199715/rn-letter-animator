@@ -10,7 +10,7 @@ export interface LayoutOptions {
   letterSpacing: number;
 }
 
-export function computeLayout(
+export function buildParagraphLayout(
   _text: string,
   _options: LayoutOptions
 ): ParagraphLayout {
