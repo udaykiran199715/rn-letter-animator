@@ -1,4 +1,4 @@
-import type { TextStyle } from 'react-native';
+import type { StyleProp, TextStyle } from 'react-native';
 
 export interface CharacterProps {
   glyph: string;
@@ -9,5 +9,5 @@ export interface CharacterProps {
 
   opacity: number;
 
-  style?: TextStyle;
+  style?: StyleProp<TextStyle>;
 }
