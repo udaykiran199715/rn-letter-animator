@@ -24,6 +24,14 @@ export default defineConfig([
     },
   },
   {
-    ignores: ['node_modules/', 'lib/'],
+    ignores: [
+      'node_modules/**',
+      'lib/**',
+      '.yarn/**',
+      'example/node_modules/**',
+      'coverage/**',
+      '*.config.js',
+      '*.config.mjs',
+    ],
   },
 ]);
