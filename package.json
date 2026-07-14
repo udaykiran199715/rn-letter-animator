@@ -121,5 +121,8 @@
       "eslint"
     ],
     "version": "0.63.0"
+  },
+  "dependencies": {
+    "react-native-reanimated": "^4.5.1"
   }
 }
