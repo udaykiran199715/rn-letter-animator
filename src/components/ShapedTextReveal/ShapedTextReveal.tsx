@@ -6,6 +6,7 @@ import type { ShapedTextRevealProps } from './types';
 
 export function ShapedTextReveal({
   glyphs,
+  visibleGlyphCount,
   style,
   textStyle,
 }: ShapedTextRevealProps) {
@@ -25,7 +26,7 @@ export function ShapedTextReveal({
           glyph={glyph.value}
           x={0}
           y={0}
-          opacity={1}
+          opacity={glyph.index < visibleGlyphCount ? 1 : 0}
           style={textStyle}
         />
       ))}

@@ -29,6 +29,7 @@ export const LetterAnimator = forwardRef<
   return (
     <ShapedTextReveal
       glyphs={engine.glyphs}
+      visibleGlyphCount={engine.visibleGlyphCount}
       style={props.style}
       textStyle={props.textStyle}
     />
