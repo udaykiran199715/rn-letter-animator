@@ -12,7 +12,7 @@ const VALID_TRANSITIONS: Record<TimelineState, TimelineState[]> = {
   finished: ['idle'],
 };
 
-export class TimelineStateMachine {
+export class TimelineStateManager {
   private state: TimelineState = 'idle';
 
   getState(): TimelineState {

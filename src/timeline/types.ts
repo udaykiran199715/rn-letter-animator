@@ -10,27 +10,25 @@ export interface TimelineConfig {
 export interface TimelineSnapshot {
   progress: number;
   state: TimelineState;
+
   duration: number;
   delay: number;
   loop: boolean;
+
+  startTime: number | null;
+  pauseTime: number | null;
 }
 
 export interface TimelineController {
   play(): void;
-
   pause(): void;
-
   resume(): void;
-
   stop(): void;
-
   reset(): void;
-
   seek(progress: number): void;
 }
 
 export interface TimelineEngine extends TimelineController {
   getSnapshot(): TimelineSnapshot;
-
   isPlaying(): boolean;
 }
