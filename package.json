@@ -32,11 +32,17 @@
     "!**/.*"
   ],
   "scripts": {
-    "example": "yarn workspace rn-letter-animator-example",
-    "clean": "del-cli lib",
+    "build": "bob build",
     "prepare": "bob build",
-    "typecheck": "tsc",
-    "lint": "eslint \"**/*.{js,ts,tsx}\""
+    "clean": "del-cli lib",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "example": "pnpm --filter rn-letter-animator-example",
+    "example:start": "pnpm --filter rn-letter-animator-example start",
+    "example:android": "pnpm --filter rn-letter-animator-example android",
+    "example:ios": "pnpm --filter rn-letter-animator-example ios",
+    "example:web": "pnpm --filter rn-letter-animator-example web"
   },
   "keywords": [
     "react-native",
@@ -82,7 +88,7 @@
   "workspaces": [
     "example"
   ],
-  "packageManager": "yarn@4.11.0",
+  "packageManager": "pnpm@10.28.2",
   "react-native-builder-bob": {
     "source": "src",
     "output": "lib",
