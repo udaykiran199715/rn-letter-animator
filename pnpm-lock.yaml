@@ -87,6 +87,9 @@ importers:
       react-native-web:
         specifier: ~0.21.0
         version: 0.21.2(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      rn-letter-animator:
+        specifier: workspace:*
+        version: link:..
     devDependencies:
       react-native-builder-bob:
         specifier: ^0.43.0
