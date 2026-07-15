@@ -2,13 +2,13 @@ import { useMemo } from 'react';
 
 import { createGlyphs } from '../engines/glyph';
 
-import type { Glyph } from '../engines/glyph';
 import type { LetterAnimatorProps } from '../components/LetterAnimator/types';
 import { useTimelineController } from '../timeline/useTimelineController';
 import type { TimelineController } from '../timeline';
-
+import type { RenderGlyph } from '../engines/glyph';
+import { useCharacterLayout } from './useCharacterLayout';
 export interface LetterAnimatorEngine {
-  glyphs: Glyph[];
+  renderGlyphs: RenderGlyph[];
 
   progress: number;
 
@@ -28,8 +28,10 @@ export function useLetterAnimatorEngine(
 
   const visibleGlyphCount = Math.floor(timeline.progress * glyphs.length);
 
+  const renderGlyphs = useCharacterLayout(glyphs, visibleGlyphCount);
+
   return {
-    glyphs,
+    renderGlyphs,
     progress: timeline.progress,
     visibleGlyphCount,
     timeline,

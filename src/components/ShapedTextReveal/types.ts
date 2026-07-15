@@ -1,9 +1,9 @@
 import type { StyleProp, TextStyle, ViewStyle } from 'react-native';
 
-import type { Glyph } from '../../engines/glyph';
+import type { RenderGlyph } from '../../engines/glyph';
 
 export interface ShapedTextRevealProps {
-  glyphs: Glyph[];
+  renderGlyphs: RenderGlyph[];
 
   visibleGlyphCount: number;
 

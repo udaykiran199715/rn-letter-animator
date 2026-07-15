@@ -5,8 +5,7 @@ import { Character } from '../Character';
 import type { ShapedTextRevealProps } from './types';
 
 export function ShapedTextReveal({
-  glyphs,
-  visibleGlyphCount,
+  renderGlyphs,
   style,
   textStyle,
 }: ShapedTextRevealProps) {
@@ -20,13 +19,13 @@ export function ShapedTextReveal({
         style,
       ]}
     >
-      {glyphs.map((glyph) => (
+      {renderGlyphs.map((glyph) => (
         <Character
           key={glyph.index}
           glyph={glyph.value}
-          x={0}
-          y={0}
-          opacity={glyph.index < visibleGlyphCount ? 1 : 0}
+          x={glyph.x}
+          y={glyph.y}
+          opacity={glyph.opacity}
           style={textStyle}
         />
       ))}
